@@ -16,7 +16,7 @@ var express = require("express"),
   movieRoutes = require("./routes/movies"),
   indexRoutes = require("./routes/index");
 
-  var url=process.env.DATABASEURL;
+  var url=process.env.DATABASEURL || "mongodb://localhost/movie_app";
   // console.log(url);
   mongoose.connect(url, {
     useNewUrlParser: true,
