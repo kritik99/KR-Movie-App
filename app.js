@@ -17,8 +17,8 @@ var express = require("express"),
   indexRoutes = require("./routes/index");
 
   var url=process.env.DATABASEURL;
-  console.log(url);
-  mongoose.connect('mongodb://localhost/movies_app', {
+  // console.log(url);
+  mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify : false
