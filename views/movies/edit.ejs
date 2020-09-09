@@ -1,0 +1,64 @@
+<% include ../partials/header %>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-12 col-sm-12 col-lg-9">
+        <div class="card shadow border-0">
+          <div class="card-body">
+            <h1 class="text-center">Edit
+                <%= movie.name %>
+            </h1>
+            <p>
+              <small class="text-muted">Fields marked * are required.</small>
+            </p>
+            <form action="/movies/<%= movie._id %>?_method=PUT" method="POST" class="needs-validation" enctype="multipart/form-data"
+              novalidate>
+              <div class="form-group">
+                <label>Name*</label>
+                <input type="text" class="form-control" name="movie[name]" value="<%= movie.name %>">
+              </div>
+              <div class="form-group">
+                <label for="">IMDb*</label>
+                <input type="number" class="form-control" name="movie[imdb]" value="<%= movie.imdb %>" min="0.00" max="10.0" step="0.1">
+              </div>
+              <div class="input-group mb-3">
+                <div class="custom-file">
+                  <input type="file" name="image" accept="image/*" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Image*</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description*</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="movie[description]" rows="3" required><%= movie.description %></textarea>
+              </div>
+              <div class="form-group">
+                <label for="">Director Name*</label>
+                <input type="text" class="form-control" name="movie[director]" value="<%= movie.director %>" required>
+                <div class="invalid-feedback">
+                  Please provide the movie Director's name.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Release Date*</label>
+                <input type="text" class="form-control" name="movie[release]" value="<%= movie.release %>" required>
+                <div class="invalid-feedback">
+                  Please provide movie release date.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Genres separated by commas (romantic,dark,comedy)</label>
+                <input type="text" class="form-control" name="movie[tags]" value="<%= movie.tags %>">
+              </div>
+              <button type="submit" class="btn btn-danger btn-block">Submit</button>
+            </form>
+            <a class="btn btn-link btn-block" href="/movies/<%= movie._id %>">Go Back</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+
+  <% include ../partials/footer %>

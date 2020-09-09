@@ -1,0 +1,79 @@
+<% include ../partials/header %>
+
+  <div class="container mt-4">    
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-12 col-sm-12 col-lg-9">
+        <div class="card shadow border-0">          
+          <div class="card-body">
+            <h1 class="text-center">Create Movie</h1>
+            <p>
+              <small class="text-muted">Fields marked * are required.</small>
+            </p>
+            <form action="/movies" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="">Name*</label>
+                <input type="text" class="form-control" name="movie[name]" placeholder="Name" required>
+                <div class="invalid-feedback">
+                  Please provide a movie name.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">IMDb*</label>
+                <input type="number" class="form-control" name="movie[imdb]" placeholder="IMDb" min="0.00" max="10.0" step="0.1" required>
+                <div class="invalid-feedback">
+                  Please provide the imdb rating of the movie.
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <div class="custom-file">
+                  <input type="file" name="image" accept="image/*" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon01"
+                    required>
+                  <div class="invalid-feedback">
+                    Please upload an image of your movie.
+                  </div>
+                  <label class="custom-file-label" for="inputGroupFile01">Image*</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description*</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="movie[description]" rows="3" required></textarea>
+                <div class="invalid-feedback">
+                  Please provide a description of your movie.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Director*</label>
+                <input type="text" class="form-control" name="movie[director]" placeholder="Movie Director's Name" required>
+                <div class="invalid-feedback">
+                  Please provide the movie Director's name.
+                </div>
+              </div>
+              <label for="">Release Date*</label>
+              <div class="form-group">
+                <input type="text" class="form-control" name="movie[release]" placeholder="e.g. 15 Nov 2020" required>
+                <div class="invalid-feedback">
+                  Please provide movie release date.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Genres separated by commas (romantic,dark,comedy)</label>
+                <input type="text" class="form-control" name="movie[tags]" placeholder="Example: romantic, dark, comedy">
+              </div>
+              <button type="submit" class="btn btn-danger btn-block">Submit</button>
+            </form>
+            <a class="btn btn-link" href="/movies">Go Back</a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+
+  </div>
+
+  <% include ../partials/footer %>
