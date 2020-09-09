@@ -1,0 +1,88 @@
+body {
+    background-image: url(https://www.radzen.com/documentation/login-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "PT Sans", sans-serif;
+    margin-bottom: 60px;
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  a {
+    color: #0180cf;
+  }
+  
+  #commentItem {
+    background: #f7f7f7;
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  
+  .delBtn {
+    background: transparent;
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 60px; */
+    line-height: 60px;
+    background: transparent;
+  }
+  
+  .navbar-brand {
+    font-size: 26px;
+  }
+  
+  .jumbotron {
+    background: linear-gradient(rgba(70, 70, 70, 0.35), rgba(70, 70, 70, 0.35)),
+      url(https://cdn.wallpapersafari.com/70/1/lHchW2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    margin-bottom: 0px;
+  }
+  
+  .jumbotronText {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar-dark{
+    background-color: #39393b;
+  }
+
+  /* login card */
+  .card {
+      background-color: #9a9d9e;
+      transform: translate(0%,0%);
+      background: rgba(0, 0, 0, 0.6);
+  }
+
+  .form-group {
+      color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .mt-2 {
+    color: white;
+  }
+
+  .form-control{
+      background-color: #2a2d2e;
+  }
+
+  /* register image form */
+  #image {
+    background-color: #313f44;
+  }
