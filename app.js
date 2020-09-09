@@ -31,9 +31,8 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 // PASSPORT CONFIG
-app.use(
-  require("express-session")({
-    secret: "shibas are the best dogs in the world.",
+app.use(require("express-session")({
+    secret: "basketball",
     resave: false,
     saveUninitialized: false
   })
